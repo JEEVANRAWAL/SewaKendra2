@@ -1,0 +1,232 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 280px;
+  transition: 1s;
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 55px 0;
+  padding-bottom: 3rem;
+}
+
+.logo span{
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  height: 60px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  margin-left: 25px;
+  margin-right:  25px;
+  top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #5f60b9;
+  transition: 0.5s;
+}
+
+.active{
+  background: #eee;
+}
+
+.active i{
+  color: #5f60b9;
+}
+
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+}
+
+/* MAin Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  color: #5f60b9;
+}
+
+.main-top .dropdown-menu{
+  display: none;
+}
+
+.main-top .show{
+  display: inline-block;
+  position: absolute;
+  list-style: none;
+  margin-left: 1280px;
+  margin-top: 30px;
+ 
+}
+
+.main-top .show form{
+  padding-top: 5px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.main-top .show form button{
+  cursor: pointer;
+  font: bolder;
+  background-color: #f7f7f7;
+}
+
+
+.main-top #serviceAddBtn{
+  background-color: #5f60b9;
+  text-align: center;
+  margin-left: 988px;
+  width: 115px;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.main-top i:hover{
+  color: #5f60b9;
+}
+
+.main .Business-info{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Business-info .card{
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.Business-info .card img{
+  width: 250px;
+  height: 150px;
+  border-radius: 5%;
+}
+.Business-info .card h4{
+  text-transform: uppercase;
+}
+.Business-info .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.Business-info table{
+  margin:  auto;
+}
+.Business-info .per{
+ margin-top:20px ;
+}
+.Business-info td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.Business-info .card a{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #5f60b9;
+}
+.Business-info .card a:hover{
+  background: #5f60b9;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Attendance List serction  */
+.Visual-representation{
+  margin-top: 20px;
+  margin-left: 12px;
+  text-transform: capitalize;
+  
+}
+.IncomeLine-chart{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  transition: height 0.3s ease;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.IncomeLine-chart canvas{
+  margin: 25px 0;
+
+}
+
+

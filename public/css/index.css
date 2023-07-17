@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+}
+
+.form-control-dark {
+    border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.form-control {
+    width: 400px;
+}
+
+.text-small {
+    font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+    outline: 0;
+}
+
+/* header{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+} */
+
+main #sliderAutoplaying {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 1300px;
+    height: 300px;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+
+.our-category, .our-services, .BestOffer, .featuredServices, .providers, footer{
+    position: relative;
+    display: block;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.our-category .container, .our-services .container, .featuredServices .container, .providers .container, footer .container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: 100%;
+}
+
+.Category-box, .Featured-box, .footer-box {
+    /* display: block; */
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-title, .provider-title {
+    display: block;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+.seeAll {
+    background-color: #5f60b9;
+    position: relative;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.category-row, .Featured-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.category-col, .Featured-col {
+    padding: 0px 16px;
+    width: 233.33px;
+    height: 225.6px;
+}
+
+.category-col a, .Featured-col a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 25px;
+    width: 201.33px;
+    height: 225.6px;
+}
+
+.card-body {
+    display: flex;
+    padding: 52.8px 15.008px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body.img {
+    object-fit: cover;
+}
+
+.card-body .categories-name {
+    margin: 20px 0px 0px 0px;
+}
+
+.our-services, .featuredServices {
+    background-color: #f6f7f9;
+}
+
+
+.favourite {
+    position: absolute;
+    right: 14px;
+    top: 15px;
+}
+
+.priceTag {
+    position: absolute;
+    display: flex;
+    background-color: #5f60b9;
+    border-radius: 15px;
+    right: 7px;
+    top: 175px;
+}
+
+.priceTag span {
+    margin: 7px 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.our-services .category-col, .featuredServices .Featured-col {
+    padding: 0px 16px;
+    width: 333.33px;
+    height: 325.6px;
+    margin-bottom: 50px;
+}
+
+.our-services .card, .featuredServices .card {
+    width: 330.33px;
+    height: 325.6px;
+}
+
+.our-services .card-body, .featuredServices .card-body {
+    display: flex;
+    padding: 10px 15.008px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-services .image, .featuredServices .image {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.our-services .image img, .featuredServices .image img {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.our-services .card-body .categories-name, .featuredServices .card-body .categories-name {
+    align-self: flex-start;
+    position: relative;
+    left: 0px;
+}
+
+.our-services .provider, .featuredServices .provider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    top: 20px;
+}
+
+.our-services .provider .profile, .featuredServices .provider .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.providerName {
+    font-size: 18px;
+    margin-left: 13px;
+    color: black;
+}
+
+
+.BestOffer .container{
+    display: block;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: 100%;
+}
+
+.BestOffer .offerBox, .providers .provider-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.BestOffer .offerBox-title{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.BestOffer .offerBox-title h1, .provider-title h1{
+    color: black;
+    font-weight: bold;
+}
+
+.BestOffer .offers, .providers .providers-row{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.BestOffer .offers .offer{
+ position: relative;
+ width: 640px;
+ height: 400px;
+ margin-bottom: 25px;
+ background-color: #f6f7f9;
+}
+
+.BestOffer .offers .offer a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+.BestOffer .offers .offer .offers-detail{
+    display: flex;
+    position: relative;
+    top: 40px;
+    left: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    flex-direction: column;
+    width: 325px;
+    height: 325px;
+}
+
+.offer .offers-detail .description{
+    color: #5f60b9;
+    font-weight: bold;
+    margin-bottom: 10px ;
+}
+
+.offer .offers-detail .offer-percentages{
+    margin-top: auto;
+}
+
+.offers .offer .price-tag{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    left: 320px;
+    bottom: 35px;
+    color: #fff;
+    background-color: #5f60b9;
+}
+
+.offers .offer .OfferProfile{
+    position: absolute;
+    width: 300px;
+    height: 370px;
+    top: 0;
+    left: 350px;
+    overflow: hidden;
+    padding-top: 90px;
+    border-radius: 0px 0px 0px 300px;
+    background-color: #fff;
+}
+.offers .offer .OfferProfile .image-box{
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.offers .offer .OfferProfile .image-box img, .providers .provider .img-box img{
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.providers .provider{
+    width: 350px;
+    height: 300px;
+    margin-bottom: 30px;
+    background-color:#f6f7f9;
+    border-radius: 20px;
+}
+
+.providers .provider a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.providers .provider .img-box{
+    position: relative;
+    left: 100px;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+} 
+
+.providers .provider .providerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+footer{
+    background-color: #1c1f34;
+}
+
+.footer-box{
+   display: flex;
+   flex-direction: column;
+}
+
+.footer-row{
+    display: flex;
+}
+
+.footer-row .col{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 400px;
+    padding: 10px;
+    margin-right: 90px;
+}
+
+.footer-row .col h4{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-row .col .Extra-Content{
+    display: flex;
+    
+}
+
+.footer-row .col .Extra-Content a{
+    display: block;
+    color:gray;
+    text-decoration: none;
+}
+
+.Extra-Content .Extra-col{
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.Extra-Content .Extra-col .content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+footer .Connect{
+    display: flex;
+    background-color: #171a2e;
+    border-radius: 20px;
+}
+
+footer .Connect h5{
+color: #fff;
+font-weight: bold;
+}
+
+footer .Connect .Extra-Content .content a{
+    font-size: 40px;
+}
