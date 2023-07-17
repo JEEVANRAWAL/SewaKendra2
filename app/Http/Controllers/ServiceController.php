@@ -45,6 +45,7 @@ class ServiceController extends Controller
       }
 
       public function showServices(Request $request){
+        // this returns to service page.
         return view('servicePage');
       }
 }
