@@ -170,7 +170,7 @@ a:hover i{
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 .Business-info .card img{
-  width: 250px;
+  width: 245px;
   height: 150px;
   border-radius: 5%;
 }
@@ -193,9 +193,10 @@ a:hover i{
   padding-right: 15px;
 }
 .Business-info .card a{
-  width: 100%;
-  margin-top: 8px;
-  padding: 7px;
+  display: inline-block;
+  width: 40%;
+  margin-top: 15px;
+  padding-top: 17px;
   cursor: pointer;
   border-radius: 10px;
   background: transparent;
@@ -207,7 +208,7 @@ a:hover i{
   transition: 0.5s;
 }
 
-/*Attendance List serction  */
+/*Char section  */
 .Visual-representation{
   margin-top: 20px;
   margin-left: 12px;

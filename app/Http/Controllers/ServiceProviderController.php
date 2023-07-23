@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\ServiceProvider;
@@ -32,6 +33,15 @@ class ServiceProviderController extends Controller
       //  }
 
       return view('serviceProvider/servicesPage',['provServices'=>$provServices]);
+    }
+
+    public function provIndex(){
+      if(Auth::guard('service-providers')->check()){
+       $providerId= Auth::guard('service-providers')->user()->id;
+        $NumberOfservices = Service::where('provider_id', '=', $providerId)->count();
+        $NumberOfpendings = Booking::where('provider_id', $providerId)->where('status', 'pending')->count();
+       return view('serviceProvider.dashboard',compact('NumberOfservices', 'NumberOfpendings'));
+      }
     }
 
 }

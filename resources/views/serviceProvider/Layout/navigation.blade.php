@@ -8,7 +8,7 @@
           <i class="fas fa-menorah"></i>
           <span class="nav-item">Dashboard</span>
         </a></li>
-        <li id="Booking"><a href="#">
+        <li id="Booking"><a href="{{ route('provBookings') }}">
           <i class="fas fa-comment"></i>
           <span class="nav-item">Bookings</span>
         </a></li>

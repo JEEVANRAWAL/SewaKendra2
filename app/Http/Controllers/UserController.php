@@ -37,7 +37,7 @@ class UserController extends Controller
         $request->session()->regenerate(); //using session() helper along with regenerate() to regenerate session ID for the security reasons.
         return redirect('/');
       }else{
-        echo "some thing went wrong";
+        return redirect('login')->with('error', "Credential didn't match!!" );
       }
     }
 

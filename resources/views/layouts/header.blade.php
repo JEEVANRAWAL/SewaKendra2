@@ -16,6 +16,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    @yield('css')
+    {{-- <link rel="stylesheet" href="{{ asset('css/serviceStyle.css') }}"> --}}
 </head>
 
 <body>
