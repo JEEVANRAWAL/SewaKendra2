@@ -5,7 +5,7 @@
   margin-top: 20px;
   text-transform: capitalize;
 }
-.attendance-list{
+.Booking .attendance-list{
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -13,7 +13,7 @@
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.table{
+.Booking .attendance-list .table{
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 15px;
@@ -21,7 +21,7 @@
   overflow: hidden;
   border-radius: 5px 5px 0 0;
 }
-table thead tr{
+.Booking .attendance-list table thead tr{
   color: #fff;
   background: #5f60b9;
   text-align: left;

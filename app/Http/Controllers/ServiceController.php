@@ -81,8 +81,13 @@ class ServiceController extends Controller
       public function BookingDone(Request $request){
         $stored='';
         $data = $request->all();
-        $currentDate= now()->toDateString();
-        $checkSameBooking= Booking::where('user_id', '=', $request->user_id)->where('service_id', '=', $request->service_id)->whereDate('booked_at', $currentDate)->count();
+        // $currentDate= now()->toDateString();
+        $checkSameBooking= Booking::where('user_id', '=', $request->user_id)->where('service_id', '=', $request->service_id)->where(function ($query) {
+                $query->where('status', 'pending')
+                ->orWhere('status', 'approved');
+              })->count();
+
+                
         if($checkSameBooking == 0){
 
           $stored= Booking::create($data);
@@ -91,7 +96,7 @@ class ServiceController extends Controller
         if($stored){
           return redirect('/services')->with('success', 'Booking Done wait for the approvel from provider!!');
         }else{
-          return redirect('/services')->with('fail', "Booking failed!. You can't book same service multiple times in a single day!!");
+          return redirect('/services')->with('fail', "Booking failed!. You have already booked this service");
         }
       }
 

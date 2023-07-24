@@ -13,11 +13,11 @@
           <span class="nav-item">Bookings</span>
         </a></li>
         <li id="Income"><a href="#">
-          <i class="fas fa-database"></i>
+          <i class="fas fa-chart-bar"></i>
           <span class="nav-item">Income</span>
         </a></li>
         <li id="Service"><a href="{{ route('provServices') }}">
-          <i class="fas fa-chart-bar"></i>
+          <i class="fas fa-database"></i>
           <span class="nav-item">Services</span>
         </a></li>
         <li id="Setting"><a href="#">

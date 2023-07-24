@@ -16,13 +16,26 @@ class BookingController extends Controller
         }
     }
 
+    public function showUsersBookingHistory(){
+      if(Auth::check()){
+          $user_id= Auth::user()->id;
+          $bookings= Booking::where('user_id', '=', $user_id)->with('Service')->get();
+          return view('Users.bookingHistory',['bookings'=> $bookings]);
+      }
+  }
+
     public function updateStatus(Request $request){
       $updateStatus= Booking::where('id', '=', $request->bookingId)->update([
          'status'=> $request->status
       ]);
 
       if($updateStatus){
-        return redirect('provBookings');
+        if(Auth::guard('service-providers')->check()){
+
+          return redirect('provBookings');
+        }else{
+          return redirect('/UsersBookingHistory');
+        }
       }
     }
 }

@@ -33,6 +33,7 @@ Route::post('logout',[AccessController::class,'logout'])->name('logout');
 Route::get('/services',[ServiceController::class, 'showServices'])->name('services');
 Route::get('serviceBookingPage/{id}',[ServiceController::class, 'showClickedService']);
 Route::post('booked',[ServiceController::class,'BookingDone'])->name('userBookingsubmitted');
+Route::get('/UsersBookingHistory',[BookingController::class, 'showUsersBookingHistory'])->name('showUsersBooking');
 
 
 //provider's Routes
@@ -46,6 +47,6 @@ Route::get('deleteService/{id}',[ServiceController::class, 'DeleteService']);
 Route::get('provBookings',[BookingController::class,'showAssociateBookings'])->name('provBookings');
 Route::post('updateBookingStatus',[BookingController::class,'updateStatus'])->name('updateBookingStatus');
 
-
+//admin's Routes
 Route::post('adminlogin',[AdminController::class, 'adminLogin'])->name('adminlogin');
 Route::get('adminDashboard',[AdminController::class, 'viewAdmin']);
