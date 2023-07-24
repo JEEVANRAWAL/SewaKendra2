@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ServiceHelper;
 use App\Models\Booking;
 use App\Models\Service;
 use App\Models\ServiceCategory;
@@ -48,9 +49,10 @@ class ServiceController extends Controller
       }
 
       public function showServices(Request $request){
+        $frequentlyBookedServices = ServiceHelper::getFrequentlyBookedServices(); // here we using algorithm to display frequently booked services
         $services = Service::with('ServiceProvider', 'ServiceCategory')->get();
         // this returns to service page.
-        return view('servicePage',['services'=>$services]); //here we have sent associative array i.e."service" as key "$service" as value
+        return view('servicePage', compact('services', 'frequentlyBookedServices')); //here we have sent associative array i.e."service" as key "$service" as value
       }
 
 
@@ -134,4 +136,7 @@ class ServiceController extends Controller
         Service::find($request->id)->delete();
         return redirect('/provServices');
       }
+
+
+      
 }

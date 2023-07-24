@@ -16,6 +16,7 @@
               <th>ID</th>
               <th>Service Name</th>
               <th>Customer</th>
+              <th>Contact</th>
               <th>Price</th>
               <th>Date</th>
               <th>Status</th>
@@ -29,6 +30,7 @@
               <td>{{ $booking->id }}</td>
               <td>{{ $booking->Service->name }}</td>
               <td>{{ $booking->User->name }}</td>
+              <td>{{ $booking->User->phone_number }}</td>
               <td>{{ $booking->price }}</td>
               <td>{{ $booking->date }}</td>
               <td>{{ $booking->status }}</td>

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="Category-box">
             <div class="header-title">
-                <h1>Services</h1>
+                <h1>Frequently Booked Services</h1>
             </div>
             @if(Session::has('success'))
             <div class="message">
@@ -16,6 +16,38 @@
                 <span>{{ Session::get('fail') }}</span>
             </div>
             @endif
+
+            <ul class="category-row" style="justify-content: flex-start">
+                @foreach ($frequentlyBookedServices as $frequentlyBooked)
+                    
+                <li class="category-col" style="margin-left: 25px">
+                    <a href="{{ 'serviceBookingPage/'. $frequentlyBooked['service']->id }}">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="image">
+                                    <img src="{{ asset('storage/serviceImages/' . $frequentlyBooked['service']->img) }}" alt="image">
+                                </div>
+                                <div class="favourite"  style="top: 20px">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="priceTag" style="top: 212px">
+                                    <span>{{ $frequentlyBooked['service']->price }}</span>
+                                </div>
+                                <h6 class="categories-name" style="margin-top: 15px">{{ $frequentlyBooked['service']->name }}</h6>
+                                
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                @endforeach
+
+            </ul>
+
+            <div class="header-title">
+                <h1>Services</h1>
+            </div>
+
             <ul class="category-row">
                 @foreach ($services as $service)
                     
