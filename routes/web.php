@@ -46,7 +46,16 @@ Route::post('/serviceUpdate',[ServiceController::class, 'serviceUpdate'])->name(
 Route::get('deleteService/{id}',[ServiceController::class, 'DeleteService']);
 Route::get('provBookings',[BookingController::class,'showAssociateBookings'])->name('provBookings');
 Route::post('updateBookingStatus',[BookingController::class,'updateStatus'])->name('updateBookingStatus');
+Route::post('providerRegistration',[ServiceProviderController::class,'providerRegistration'])->name('providerRegistration');
+Route::get('providerRegistrationForm',[ServiceProviderController::class,'showRegistration'])->name('providerRegistrationForm');
 
 //admin's Routes
-Route::post('adminlogin',[AdminController::class, 'adminLogin'])->name('adminlogin');
-Route::get('adminDashboard',[AdminController::class, 'viewAdmin']);
+Route::get('adminlogin',[AdminController::class, 'adminLogin'])->name('adminlogin');
+Route::get('adminDashboard',[AdminController::class, 'viewAdmin'])->name('adminDashboard');
+Route::get('pendingRequest',[AdminController::class, 'viewPendingProviders'])->name('pendingRequest');
+Route::post('approveProvider',[ServiceProviderController::class,'approveProvider'])->name('approveProvider');
+Route::get('viewUsers',[AdminController::class,'viewUsers'])->name('viewUsers');
+Route::post('editOrdelete',[UserController::class,'editOrdelete'])->name('editOrdelete');
+Route::get('viewServices',[AdminController::class,'viewServices'])->name('viewServices');
+Route::post('serviceDelete',[AdminController::class,'DeleteService'])->name('DeleteService');
+Route::post('UpdateService',[AdminController::class,'UpdateService'])->name('UpdateService');

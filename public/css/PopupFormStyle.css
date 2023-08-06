@@ -20,8 +20,18 @@
     position: relative;
    
   }
+  
 
   .close-button {
+    position: absolute;
+    font-size: 40px;
+    color: red;
+    top: 0px;
+    left: 660px;
+    cursor: pointer;
+  }
+
+  .close-button2 {
     position: absolute;
     font-size: 40px;
     color: red;

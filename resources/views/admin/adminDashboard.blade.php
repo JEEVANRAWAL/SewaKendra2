@@ -1,30 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Panel</title>
-</head>
-<body>
-    <div class="container">
-        <nav style="display: flex; justify-content:flex-end;">
-            <div class="account" style="display:inline-block; background-color: aqua">
-                <div class="username">
-                    @if (Session::has('username')){
-                        <span>{{ Session::get('username') }}</span>
-                    }
-                    @endif
-                </div>
-                <div class="logout">
-                    <a href="#"><span>logout</span></a>
-                </div>
-            </div>
-        </nav>
+@extends('admin.Layout.main')
+  
+@section('content')
 
-        <main>
-            <span>{{ Session::get('success') }}</span>
-        </main>
-    </div>
+    <section class="main">
+      <div class="main-top">
+        <h1>Admin Dashboard</h1>
+        <i class="fas fa-user-cog" onclick="toggleDropdown()"></i>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><form action="{{ route('logout') }}" method="POST">
+            @csrf
+         <button type="submit" class="btn btn-outline-light me-2 btn-sm">Logout</button>
+        </form></li>
+        </ul>
+      </div>
+      <div class="Business-info">
+        <div class="card">
+          <h4>Admins</h4>
+          <div class="per">
+           <h5>{{ $numAdmin }}</h5>
+          </div>
+         <a href="{{ route('provServices') }}">VIEW</a>
+        </div>
+
+        <div class="card">
+            <h4>Users</h4>
+            <div class="per">
+             <h5>{{ $numUser }}</h5>
+            </div>
+            <a href="#">VIEW</a>
+        </div>
+
+        <div class="card">
+          <h4>Services</h4>
+          <div class="per">
+           <h5>{{ $numService }}</h5>
+          </div>
+          <a href="{{ route('provBookings') }}">VIEW</a>
+        </div>
+
+        <div class="card">
+            <h4>Providers</h4>
+            <div class="per">
+             <h5>{{ $numProvider }}</h5>
+            </div>
+            <a href="{{ route('provBookings') }}">VIEW</a>
+        </div>
+
+        <div class="card">
+            <h4>Pending Request</h4>
+            <div class="per">
+             <h5>{{ $numPending }}</h5>
+            </div>
+            <a href="{{ route('provBookings') }}">VIEW</a>
+        </div>
+       
+      </div>
+
+    </section>
+  </div>
+  <script src="{{ asset('js/addClass.js') }}"></script>
+
 </body>
 </html>
+@endsection

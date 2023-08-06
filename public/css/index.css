@@ -432,6 +432,7 @@ footer{
 
 .footer-row{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .footer-row .col{

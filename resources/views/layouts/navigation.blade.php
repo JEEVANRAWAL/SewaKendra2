@@ -41,6 +41,10 @@
                 <form action="{{ route('registrationForm') }}" method="GET">
                     <button type="submit" class="btn btn-warning">Sign-up</button>
                 </form>
+
+                <form action="{{ route('providerRegistrationForm') }}" method="GET">
+                    <button type="submit" class="btn" style="background-color: green; margin-left:5px; color:#fff">Become Provider</button>
+                </form>
             </div>
 
             @endif

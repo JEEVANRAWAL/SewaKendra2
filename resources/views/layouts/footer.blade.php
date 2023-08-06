@@ -60,10 +60,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="footer-row"></div> 
         </div>
     </div>
+    <span style="color: #fff; display:block; text-align:center;"> &copy; <script>document.write(new Date().getFullYear())</script> Jeevan Rawal All Rights Reserved </span>
 </footer>
 
 

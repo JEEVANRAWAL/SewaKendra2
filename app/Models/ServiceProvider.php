@@ -11,6 +11,13 @@ class ServiceProvider extends Model implements Authenticatable
     use \Illuminate\Auth\Authenticatable;
     use HasFactory;
     
+    protected $fillable=[
+     'name',
+     'address',
+     'phone_number',
+     'email'
+    ];
+
     //Relation defined with Service model
     public function Service(){
         return $this->hasMany(Service::class, 'provider_id');
