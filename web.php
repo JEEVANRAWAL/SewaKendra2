@@ -8,7 +8,6 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceProviderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------

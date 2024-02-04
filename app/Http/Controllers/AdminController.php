@@ -33,7 +33,7 @@ class AdminController extends Controller
         $numProvider= ServiceProvider::where('status', '=', 'approved')->count();
         $numPending= ServiceProvider::where('status', '=', 'pending')->count();
 
-        return view('admin\adminDashboard', compact('numAdmin', 'numUser', 'numService', 'numProvider', 'numPending'));
+        return view('admin.adminDashboard', compact('numAdmin', 'numUser', 'numService', 'numProvider', 'numPending'));
     }else{
         return redirect('loginForm')->with('error', 'Invalid Request! Access Denied!!');
     }
