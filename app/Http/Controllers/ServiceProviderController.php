@@ -20,7 +20,7 @@ class ServiceProviderController extends Controller
         $password=$request->session()->get('password');
 
         if(Auth::guard('service-providers')->attempt(['user_name'=> $username, 'password'=>$password])){ //attempt method expect associative array so we have passed associative array in it
-           
+          // dd(Auth::guard('service-providers')->user());
             $request->session()->regenerate(); //using session() helper along with regenerate() to regenerate session ID for the security reasons.
             return redirect('/providerDashboard');
           }else{

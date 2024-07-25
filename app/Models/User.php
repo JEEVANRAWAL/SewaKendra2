@@ -28,7 +28,7 @@ class User extends Authenticatable
     
     //Relation defined with service model
     public function Service(){
-        return $this->belongsToMany(Service::class, 'bookings');
+        return $this->belongsToMany(Service::class, 'bookings'); // In this case "bookings table" work as pivot table between user model and service model
     }
 
     //Relation defined with Booking model

@@ -34,6 +34,7 @@ class UserController extends Controller
       $password=$request->session()->get('password');
 
       if(Auth::attempt(['user_name'=>$username, 'password'=>$password])){
+        //dd(Auth::user());
         $request->session()->regenerate(); //using session() helper along with regenerate() to regenerate session ID for the security reasons.
         return redirect('/');
       }else{
