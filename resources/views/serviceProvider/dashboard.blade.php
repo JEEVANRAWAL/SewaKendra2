@@ -19,9 +19,9 @@
           <h4>Services</h4>
           <!-- <p>Ui designer</p> -->
           <div class="per">
-           <h5>70</h5>
+           <h5>{{ $NumberOfservices }}</h5>
           </div>
-         <a href="#">Profile</a>
+         <a href="{{ route('provServices') }}">VIEW</a>
         </div>
 
         <div class="card">
@@ -31,7 +31,7 @@
             <div class="per">
              <h5>50</h5>
             </div>
-            <a href="#">Profile</a>
+            <a href="#">VIEW</a>
         </div>
 
         <div class="card">
@@ -39,9 +39,9 @@
           <h4>Pending</h4>
           <!-- <p>Ui designer</p> -->
           <div class="per">
-           <h5>4</h5>
+           <h5>{{ $NumberOfpendings }}</h5>
           </div>
-          <a href="#">Profile</a>
+          <a href="{{ route('provBookings') }}">VIEW</a>
         </div>
        
       </div>

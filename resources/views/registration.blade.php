@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 <body>
-    <div class="container" style="background-color:aqua; width:350px;  margin:auto;">
+    <div class="container" style="width:350px;  margin:auto;">
+        <h1>Sewa Kendra</h1>
+        <div class="horizontal-line"></div>
         <h2>Registration Form</h2>
         @if(Session::has('success')){
             <span>{{ Session::get('success') }}</span>
@@ -45,7 +48,8 @@
             <input type="password" id="Cpassword" name="Cpassword" value="{{ old('Cpassword'); }}" ><br>
             <span>@error('Cpassword') {{ $message }} @enderror</span><br>
 
-            <input type="submit" value="submit">
+            <input type="submit" value="submit" id="submit">
+            <a href="{{ route('loginForm') }}">Already Registered? click here </a>
         </form>
     </div>
 </body>

@@ -85,6 +85,15 @@ main #sliderAutoplaying {
     margin-right: auto;
 }
 
+.Category-box .message{
+    padding: 20px;
+    width: 400px;
+    font-weight: bolder;
+    margin: 15px;
+    border-radius: 5px;
+    background-color:aquamarine;
+}
+
 .header-title, .provider-title {
     display: block;
     display: flex;
@@ -149,7 +158,14 @@ main #sliderAutoplaying {
 }
 
 .card-body .categories-name {
-    margin: 20px 0px 0px 0px;
+    font-weight: bolder;
+    margin: 5px 0px 0px 0px;
+}
+
+.card-body .serviceCategory{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    align-self:flex-start;
 }
 
 .our-services, .featuredServices {
@@ -160,7 +176,7 @@ main #sliderAutoplaying {
 .favourite {
     position: absolute;
     right: 14px;
-    top: 15px;
+    top: 5px;
 }
 
 .priceTag {
@@ -416,6 +432,7 @@ footer{
 
 .footer-row{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .footer-row .col{

@@ -34,10 +34,11 @@ class UserController extends Controller
       $password=$request->session()->get('password');
 
       if(Auth::attempt(['user_name'=>$username, 'password'=>$password])){
+        //dd(Auth::user());
         $request->session()->regenerate(); //using session() helper along with regenerate() to regenerate session ID for the security reasons.
         return redirect('/');
       }else{
-        echo "some thing went wrong";
+        return redirect('login')->with('error', "Credential didn't match!!" );
       }
     }
 
@@ -51,5 +52,35 @@ class UserController extends Controller
 
     public function viewRegistrationForm(){
       return view('registration');
+    }
+
+    public function editOrdelete(Request $request){
+      if(isset($request->UpdateBtn)){
+        $validate= $request->validate([
+          'Name' => 'required',
+          'Address' => 'required',
+          'Contact' => 'required|max:10|min:10',
+          'UserEmail' => 'required|email',
+          'Username' => 'required| min:6| max:15'
+        ]);
+
+        $update= User::where('id', '=', $request->UserId)->update([
+          'name' => $validate['Name'],
+        'address' => $request->Address ,
+        'phone_number' => $request->Contact,
+        'email' => $request->UserEmail,
+        'user_name' => $request->Username,
+        ]);
+        
+        if($update){
+        return redirect('viewUsers')->with('success', 'User updated successfully!!');
+        }
+
+      }elseif(isset($request->DeleteBtn)){
+        $deleteUser = User::find($request->UserId)->delete();
+        if($deleteUser){
+        return redirect('viewUsers')->with('cancel', 'User deleted successfully!!');
+        }
+      }
     }
 }

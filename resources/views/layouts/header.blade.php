@@ -12,10 +12,11 @@
     <script src="https://kit.fontawesome.com/53e0b2d3d8.js" crossorigin="anonymous"></script>
 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    @yield('css')
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    @yield('css')
+    {{-- <link rel="stylesheet" href="{{ asset('css/serviceStyle.css') }}"> --}}
 </head>
 
 <body>

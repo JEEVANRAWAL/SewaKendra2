@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->unsignedBigInteger('service_id')->nullable();
             $table->foreign('service_id')->references('id')->on('services')->onDelete('set null');
-            $table->string('status');
+            $table->string('price');
+            $table->string('status')->default('pending');
             $table->timestamp('booked_at');
             $table->timestamp('updated_time')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));;
         });

@@ -17,13 +17,14 @@
 
         @foreach ($provServices as $provService)
         <div class="card">
-          <img src="{{ asset('storage/serviceImages/' . $provService->img) }}">
+          <img src="{{ asset('storage/serviceImages/'. $provService->img) }}">
           <h4>{{ $provService->name }}</h4>
           <p>{{ $provService->ServiceCategory->name }}</p>
           <div class="per">
            <h5>{{ $provService->price }}</h5>
           </div>
-         <a href="#">Profile</a>
+         <a href="{{ 'serviceBookingPage/'.$provService->id }}">EDIT</a>
+         <a href="{{ 'deleteService/'.$provService->id}}">DELETE</a>
         </div>
         @endforeach
 
@@ -61,7 +62,7 @@
 
           </script>
     </section>
-
+  </div>
     <script src="{{ asset('js/addClass.js') }}"></script>
   </body>
 </html>
