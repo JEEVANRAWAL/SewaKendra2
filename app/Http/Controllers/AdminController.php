@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
-use App\Models\ServiceCategory;
+use App\Models\Category;
 use App\Models\ServiceProvider;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -54,7 +54,7 @@ class AdminController extends Controller
 
    public function viewServices(){
     $services= Service::all();
-    $category= ServiceCategory::all();
+    $category= Category::all();
     return view('admin.services',['services'=> $services, 'categorys'=>$category]);
    }
 

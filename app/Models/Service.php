@@ -25,7 +25,7 @@ class Service extends Model
 
     //Relation defined with ServiceCategory model
     public function ServiceCategory(){
-        return $this->belongsTo(ServiceCategory::class, 'category_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     //Relation defined with Booking model

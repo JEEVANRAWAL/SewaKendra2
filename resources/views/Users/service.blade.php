@@ -58,7 +58,7 @@
             <hr>
             <span>{{ $clickedServ->price }}</span>
             <input type="hidden" name="price" value="{{ $clickedServ->price }}">
-            <button type="submit" id="button">Conform</button>
+            <button type="submit" id="button">Confirm</button>
           </div>
         </form>
       </div>

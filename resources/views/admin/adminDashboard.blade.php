@@ -27,7 +27,7 @@
             <div class="per">
              <h5>{{ $numUser }}</h5>
             </div>
-            <a href="#">VIEW</a>
+            <a href="{{ route('viewUsers') }}">VIEW</a>
         </div>
 
         <div class="card">
@@ -35,7 +35,7 @@
           <div class="per">
            <h5>{{ $numService }}</h5>
           </div>
-          <a href="{{ route('provBookings') }}">VIEW</a>
+          <a href="{{ route('viewServices') }}">VIEW</a>
         </div>
 
         <div class="card">
@@ -51,7 +51,7 @@
             <div class="per">
              <h5>{{ $numPending }}</h5>
             </div>
-            <a href="{{ route('provBookings') }}">VIEW</a>
+            <a href="{{ route('pendingRequest') }}">VIEW</a>
         </div>
        
       </div>

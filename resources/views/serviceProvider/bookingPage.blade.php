@@ -68,7 +68,7 @@
             <option value="completed">completed</option>
             <option value="canceled">canceled</option>
         </select>
-        <button type="submit" id="button">Conform</button>
+        <button type="submit" id="button">Confirm</button>
       </div>
     </form>
   </div>

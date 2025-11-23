@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use App\Helpers\ServiceHelper;
 use App\Models\Booking;
 use App\Models\Service;
-use App\Models\ServiceCategory;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
     public function showServiceRegistrationForm(){
-        $categories= ServiceCategory::all();
+        $categories= Category::all();
         return view('serviceProvider/addServiceForm',['categories'=> $categories]); //here we have sent associative array i.e."categories" as key "$categories" as value
       }
   
@@ -68,7 +68,7 @@ class ServiceController extends Controller
 
           $id = $request->id;
           $clickedService = Service::where('id','=', $id)->with('ServiceCategory')->get();
-          $categories= ServiceCategory::all();
+          $categories= Category::all();
           return view('serviceProvider.updateServiceForm',['clickedService'=> $clickedService, 'categories'=> $categories]);
 
         }else{
